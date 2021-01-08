@@ -1,0 +1,86 @@
+{% extends 'generales/base/base.html' %}
+{% include 'generales/base/head.html' %}
+
+
+
+{% block content %}
+    <!-- {% from "macro.html" import render_field %}-->
+<!------ Include the above in your HEAD tag ---------->
+
+
+
+<br><br>
+
+
+
+<section>
+<div class="container">
+  {% with messages = get_flashed_messages(category_filter=["ERROR"])%}
+            {% if messages %}
+            <ul>
+                {% for messages in messages %}
+                  <div class="alert alert-danger ">
+                      <div class="d-sm-flex align-items-center justify-content-center ">
+                    {{messages}}  
+                  </div>
+                </div>
+                  
+                {% endfor %}
+            </ul>
+            {% endif %}
+             {% endwith %}
+<div class="wrapper fadeInDown">
+
+<div id="formContent">
+    <div class="d-sm-flex align-items-center justify-content-center mg-b-20 mg-lg-b-25 mg-xl-b-30">
+                   <a href=""><img src="/static/assets/img/logo 3.png" width="90px" height="90px" class="rounded-circle" alt=""></a>
+
+                </div><!-- form-group -->
+  <form  method="post">
+
+         <div class="d-sm-flex">
+
+         <div class="col-sm-4 col-lg-4 mg-t-10 mg-lg-t-0">
+         </div>
+         <div class="col-sm-4 col-lg-4 mg-t-10 mg-lg-t-0">
+              <div class="flex-fill">
+              <br> <br>
+
+                <h1 class="mg-b-10 wd-100p d-flex flex-column flex-sm-row justify-content-center"> {{ textTransaction.tituloLoginFaces }}</h1>
+                <div class="form-group mg-b-5 justify-content-center">
+                   {{ render_field(form.username, class='form-control', placeholder='Ingresa usuario' )}}
+                   
+                </div><!-- form-group -->
+                <div class="form-group mg-b-5 justify-content-center">
+                   {{ render_field(form.password, class='form-control', placeholder='Password' )}}
+                </div><!-- form-group -->
+                <br> <br>
+                <div id="success">
+                      <div class="sign-up">
+                        No tienes membrecia? <a href="/registro">Registrate</a>
+                    </div>
+                </div> 
+                
+                 <br> <br>
+                <div id="success">
+                    <div class="wd-100p d-flex flex-column flex-sm-row justify-content-center">
+                      <button type="submit"   class="btn btn-primary mg-b-5 mg-sm-b-0">Ingresar</button>
+                    </div>
+                </div> 
+              </div>
+            </div>
+            </div>
+           <div class="col-sm-4 col-lg-4 mg-t-10 mg-lg-t-0">
+         </div>
+        </form>
+
+   
+
+  </div>
+</div>
+</div>
+	<!-- end container -->
+</section>
+<!-- end section-single -->
+
+{% endblock %}

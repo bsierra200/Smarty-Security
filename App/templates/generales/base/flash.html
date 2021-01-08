@@ -1,0 +1,73 @@
+{% block flashError %}
+{% with messages = get_flashed_messages(category_filter=["ERROR"])%}
+            {% if messages %}
+            <ul>
+                {% for messages in messages %}
+                
+                  <div class="alert alert-danger ">
+                      <div class="d-sm-flex align-items-center justify-content-center ">
+                    {{messages}}  
+                  </div>
+                </div>
+                  
+                {% endfor %}
+            </ul>
+            {% endif %}
+             {% endwith %} 
+ {% endblock %}
+
+{% block flashsuccessDate %}
+{% with messages = get_flashed_messages(category_filter=["info"])%}
+            {% if messages %}
+            <ul>
+                {% for messages in messages %}
+                
+                  <div class="alert alert-success ">
+                      <div class="d-sm-flex align-items-center justify-content-center ">
+                    {{messages}}  
+                  </div>
+                  <div class="d-sm-flex align-items-center justify-content-center ">
+                    De la fecha: {{ dateInitDev }} a la {{ dateEndDev }}
+                  </div>
+                 
+                 
+                 
+                </div>
+
+                  
+                {% endfor %}
+            </ul>
+            {% endif %}
+             {% endwith %} 
+ {% endblock %}
+
+
+
+{% block flashsuccess %}
+{% with messages = get_flashed_messages(category_filter=["success"])%}
+            {% if messages %}
+            <ul>
+                {% for messages in messages %}
+                
+                  <div class="alert alert-success ">
+                      <div class="d-sm-flex align-items-center justify-content-center ">
+                    {{messages}} por la cantidad: {{amount}}
+                  </div>
+                  <div class="d-sm-flex align-items-center justify-content-center ">
+                     De la referencia: {{reference}}
+                  </div>
+                 
+                 
+                </div>
+
+                  
+                {% endfor %}
+            </ul>
+            {% endif %}
+             {% endwith %} 
+ {% endblock %}
+
+
+ 
+
+ 

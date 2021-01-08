@@ -1,0 +1,27 @@
+{% extends 'generales/base/base.html' %}
+
+ {% block librerias %}
+ 
+
+<script src="{{ url_for('static', filename='lib/jquery/jquery1.3.js' )}}"></script>
+<script src="{{ url_for('static', filename='lib/jquery/jquery.min.js' )}}"></script>
+<script src="{{ url_for('static', filename='lib/bootstrap/js/bootstrap.bundle.min.js' )}}"></script>
+<script src="{{ url_for('static', filename='lib/feather-icons/feather.min.js' )}}"></script>
+<script src="{{ url_for('static', filename='lib/perfect-scrollbar/perfect-scrollbar.min.js' )}}"></script>
+<script src="{{ url_for('static', filename='lib/jquery.flot/jquery.flot.js' )}}"></script>
+<script src="{{ url_for('static', filename='lib/jquery.flot/jquery.flot.stack.js' )}}"></script>
+<script src="{{ url_for('static', filename='lib/jquery.flot/jquery.flot.resize.js' )}}"></script>
+<script src="{{ url_for('static', filename='lib/chart.js/Chart.bundle.min.js' )}}"></script>
+<script src="{{ url_for('static', filename='lib/jqvmap/jquery.vmap.min.js' )}}"></script>
+<script src="{{ url_for('static', filename='lib/jqvmap/maps/jquery.vmap.usa.js' )}}"></script>
+
+<script src="{{ url_for('static', filename='assets/js/dashforge.js' )}}"></script>
+<script src="{{ url_for('static', filename='assets/js/dashforge.aside.js' )}}"></script>
+<script src="{{ url_for('static', filename='assets/js/dashforge.sampledata.js' )}}"></script>
+<script src="{{ url_for('static', filename='assets/js/dashboard-one.js' )}}"></script>
+
+<!-- append theme customizer -->
+<script src="{{ url_for('static', filename='lib/js-cookie/js.cookie.js' )}}"></script>
+<script src="{{ url_for('static', filename='assets/js/dashforge.settings.js' )}}"></script>
+
+{% endblock %}
